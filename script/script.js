@@ -40,6 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
         elem.tagName === "TEXTAREA"
       ) {
         obj[elem.name] = elem.value;
+
+        if (elem.type !== "radio") {
+          elem.value;
+        }
       }
     }
     orders.push(obj);
