@@ -3,12 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const customer = document.getElementById("customer");
   const freelancer = document.getElementById("freelancer");
-
   const blockCustomer = document.getElementById("block-customer");
   const blockFreelancer = document.getElementById("block-freelancer");
-
   const blockChoice = document.getElementById("block-choice");
   const btnExit = document.getElementById("btn-exit");
+  const formCustomer = document.getElementById("form-customer");
 
   customer.addEventListener("click", () => {
     blockChoice.style.display = "none";
