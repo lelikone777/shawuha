@@ -33,7 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
   formCustomer.addEventListener("submit", (event) => {
     event.preventDefault();
     const obj = {};
-    for (const elem of formCustomer.elements) {
+
+    // Делаем массив из коллекции и перебираем через "FOR EACH"
+    [...formCustomer.elements].forEach((elem) => {
       if (
         (elem.tagName === "INPUT" && elem.type !== "radio") ||
         (elem.type === "radio" && elem.checked) ||
@@ -45,7 +47,24 @@ document.addEventListener("DOMContentLoaded", () => {
           elem.value;
         }
       }
-    }
+    });
+
+    //     Перебор через 'FOR'
+
+    //  for (const elem of formCustomer.elements) {
+    //   if (
+    //     (elem.tagName === "INPUT" && elem.type !== "radio") ||
+    //     (elem.type === "radio" && elem.checked) ||
+    //     elem.tagName === "TEXTAREA"
+    //   ) {
+    //     obj[elem.name] = elem.value;
+
+    //     if (elem.type !== "radio") {
+    //       elem.value;
+    //     }
+    //   }
+    // }
+
     orders.push(obj);
     console.log(orders);
   });
